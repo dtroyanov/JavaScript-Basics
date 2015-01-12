@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Numbers Only Field</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="input" oninput="check()" />
+    </form>
+    <script>
+        function check() {
+            var input = document.getElementById('input');
+            var value = input.value;
+            if (isNaN(value)) {
+                input.style.backgroundColor = 'red';
+                input.disabled = true;
+
+            }
+            setTimeout(function (){ 
+                input.style.backgroundColor = 'transparent';
+                input.disabled = false; 
+                input.focus()
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

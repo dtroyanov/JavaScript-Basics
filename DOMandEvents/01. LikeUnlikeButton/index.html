@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Like/Unlike Button</title>
+    <style>
+        button {
+            color:#0094ff;
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="change()" id="like">Like</button>
+    <script>
+        function change() {
+            var button = document.getElementById('like');
+            var value = button.innerHTML;
+            if (value === 'Like') {
+                button.innerHTML = 'Unlike';
+            } else {
+                button.innerHTML = 'Like';
+            }
+        }
+    </script>
+</body>
+</html>
